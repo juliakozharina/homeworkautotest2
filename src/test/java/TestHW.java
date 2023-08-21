@@ -62,7 +62,7 @@ public class TestHW {
     }
 
     private void auth() {
-        click("//button[@class=\"sc-mrx253-0 enxKCy sc-945rct-0 iOoJwQ\"]");
+        click("//div[@class=\"sc-r03h0s-5 bYKNcH\"]");
         clearAndEnter(By.xpath("(//input[@required])[1]"), LOGIN);
         clearAndEnter(By.xpath("(//input[@required])[2]"), PASSWORD);
         click("//button[@class=\"sc-9a4spb-0 gYNtqF sc-11ptd2v-2-Component cElCrZ\"]");
@@ -96,7 +96,7 @@ public class TestHW {
         click("//button[@title=\"Начальный уровень (Beginner)\"]");
         click(FULL_DAY_CHECKBOX);
         click(REMOTE_CHECKBOX);
-        click("//button[@class=\"js-change-phone input-group__addon button\"]");
+        click("(//div[@class=\"input-group input-group_right\"])[1]");
         clearAndEnter(By.xpath("//input[@placeholder=\"Номер телефона\"]"), PHONE_NUMBER);
         click("//button[@class=\"js-send button button_blue button_md\"]");
         click("//div[@class=\"modal__close ic-close js-close-modal\"]");
@@ -141,7 +141,7 @@ public class TestHW {
 
     private void click(String xPath) {
         WebElement element = driver.findElement(By.xpath(xPath));
-        if (element.isDisplayed()){
+        if (element.isDisplayed()) {
             element.click();
         }
     }
